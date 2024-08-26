@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.poppinsfont{
+  font-family: "Poppins", sans-serif;
+}
+
+.Playballfont{
+  font-family: "Playball", cursive;
+}
+
+body{
+  font-family: "Poppins", sans-serif;
+}
