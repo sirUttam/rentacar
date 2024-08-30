@@ -37,7 +37,7 @@ function Footer() {
         </div>
         <div className="flex md:col-span-2 lg:col-span-1 flex-col gap-4">
           <div className="text-xl font-semibold">Office Location</div>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-4">
             <div className="flex gap-2 items-center">
               <IoLocationSharp className="text-xl" />
               Butwal Multiple Campus, Golpark, Butwal

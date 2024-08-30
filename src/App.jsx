@@ -8,24 +8,26 @@ import Brands from './components/page/Brands'
 import Cars from './components/page/Cars'
 import Services from './components/page/Services'
 import Contact from './components/page/Contact'
+import Layout from './HOC/Layout'
 
 function App() {
 
   return (
     <>
-    <Toolbar/>
   
   <Routes>
+    <Route element={<Layout />}>
+
     <Route path='/' element={<Home/>}/>
     <Route path='/about' element={<About/>}/>
     <Route path='/brands' element={<Brands/>}/>
     <Route path='/cars' element={<Cars/>}/>
     <Route path='/services' element={<Services/>}/>
     <Route path='/contact' element={<Contact/>}/>
+    </Route>
 
 
   </Routes>
-   <Footer/>
     </>
   )
 }
