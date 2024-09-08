@@ -1,5 +1,4 @@
 import React from "react";
-import bannerCar from "../../assets/bannercar.jpg";
 import contactCar from "../../assets/contactCar.jpg";
 import { IoIosArrowForward } from "react-icons/io";
 
