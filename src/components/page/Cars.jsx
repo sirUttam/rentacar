@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import RenaultClio from "../../assets/Renault_Clio 1.png";
 import JumboHiace from "../../assets/Jumbo_Hiace 1.png";
 import FotonToano from "../../assets/Foton_Toano2022 1.png";
@@ -8,8 +8,17 @@ import ToyotaHiace from "../../assets/Toyota_Hiace 1.png";
 import SuzukiSwift from "../../assets/Suzuki_Swift 1.png";
 import Ford from "../../assets/Ford 1.png";
 import KiaSportage from "../../assets/Kia_Sportage 1.png";
+import carbanner from'../../assets/bannercar.jpg'
 
+import { IoIosSearch } from "react-icons/io";
+
+
+import Card from "../UI/Card";
 function Cars() {
+  useEffect(() => {
+    window.scrollTo(0,0)
+   }, [])
+   
   const data = [
     {
       title: "Renault Clio",
@@ -246,49 +255,135 @@ Labore labore magna qui laboris dolor exercitation ullamco laborum. Deserunt min
 Ea sit aliqua non nisi quis est aliqua mollit velit adipisicing consequat aliqua eu. Dolore non ea sunt eiusmod elit enim labore. Ipsum consectetur cillum ea dolor excepteur et.`,
     },
   ];
+
+  const carfilter=[
+    {
+      title:"Vehicle Type",
+      subData:[
+        {
+          title:'Car'
+        },
+        {
+          title:'Scorpio'
+        },
+        {
+          title:'Hiace'
+        },
+        {
+          title:'Tata Sumo'
+        },
+      ]
+    },
+    {
+      title:"Fuel Type",
+      subData:[
+        {
+          title:'Petrol'
+        },
+        {
+          title:'Diesel'
+        },
+        {
+          title:'Electric'
+        },
+        {
+          title:'Hybrid'
+        },
+      ]
+    },
+    {
+      title:"Car Brand",
+      subData:[
+        {
+          title:'Suzuki'
+        },
+        {
+          title:'Honda'
+        },
+        {
+          title:'Hyundai'
+        },
+        {
+          title:'Toyota'
+        },
+        {
+          title:'Nissan'
+        },
+        {
+          title:'Mahindra'
+        },
+      ]
+    },
+    
+    
+  ]
   return (
-    <div className="w-11/12 mx-auto grid h-fit gap-10">
-      <div className="border-b-2 capitalize flex flex-col gap-2 border-gray-300 py-6">
-        <div>home listing</div>
-        <div className="font-semibold text-3xl">
-          Explore All Cars{" "}
-          <span className="font-normal text-base">(15 cars found)</span>
+    <div className="grid h-fit gap-20">
+      <div className="border-b-2 h-96 capitalize flex flex-col gap-2 relative text-white  border-gray-300 justify-center">
+        <div className="h-full relative  w-full  top-0 left-0 -z-10">
+          <img src={carbanner} className="h-full w-full object-cover" />
+          <div className="bg-primarycolor bg-opacity-20 h-full w-full absolute top-0 z-10">
+
+          </div>
+        </div>
+        <div className="w-11/12 absolute top-0 left-0 right-0 flex h-full justify-center flex-col gap-2 mx-auto">
+          <div>home listing</div>
+          <div className="font-semibold text-3xl">
+            Explore All Cars{" "}
+            <span className="font-normal text-base">(15 cars found)</span>
+          </div>
         </div>
       </div>
-      <div className="  grid grid-cols-7  gap-5">
-        <div className="col-span-2 "></div>
-        <div className="col-span-5 grid grid-cols-3 gap-6">
+      <div className="w-11/12 mx-auto relative  grid grid-cols-7  gap-10">
+        <div className="col-span-2 relative   ">
+       <div className="overflow-clip  border  flex flex-col gap-14 pb-10  rounded-3xl">
+       <div className="bg-primarycolor h-24 flex items-center px-4">
+            <div className="bg-white rounded-full overflow-clip px-2 flex items-center ">
+              <input className="w-full h-14 px-3 outline-none text-sm placeholder:font-light placeholder:text-gray-300 " placeholder="search car by name" />
+              <div className="h-9 w-10 flex items-center justify-center text-gray-100 text-xl bg-gray-500 rounded-full">
+              <IoIosSearch />
+              </div>
+            </div>
+          </div>
+              {/* car filters */}
+              <div className="flex flex-col px-10 gap-7 ">
+                {
+                  carfilter.map((val,i)=>{
+                    return(
+                      <div key={i} className={`flex flex-col ${i==carfilter.length-1?"border-0":"border-b"} pb-10 border-gray-400 gap-3`}>
+                      <h1 className="font-medium text-lg">{val.title}</h1>
+                   <div className="flex flex-col gap-4">
+                    {
+                      val.subData.map((item,ind)=>{
+                        return(
+                          <div className="flex items-center gap-3">
+                          <div className="h-5 w-5 border-primarycolor border-2"></div>
+                          <div>{item.title}</div>
+                        </div>
+                        )
+                      })
+                    }
+                   </div>
+                      </div>
+                    )
+                  })
+                }
+       
+            </div>
+       </div>
+        </div>
+        <div className="col-span-5 grid grid-cols-3 gap-3">
           {data.map((val, i) => {
             return (
-              <div
+              <Card
                 key={i}
-                className="border rounded-md p-2 h-full cursor-pointer group"
-              >
-                <div className="bg-gray-300 h-44 overflow-clip rounded-md">
-                  <img
-                    src={val.image}
-                    className="h-full w-full object-contain group-hover:rotate-6 group-hover:translate-y-1 group-hover:scale-125 transition-all duration-700 delay-75 ease-in-out "
-                  />
-                </div>
-                <div className="flex flex-col gap-4 pt-5 pb-6 px-2">
-                  <h1 className="text-xl font-semibold">{val.title}</h1>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-gray-100  capitalize rounded-full w-full  h-full  flex items-center justify-center px-5 py-2 text-xs ">
-                      {val.seats} seats
-                    </div>
-                    <div className="bg-gray-100  capitalize rounded-full w-full  h-full flex items-center justify-center  px-5 py-2 text-xs ">
-                      {val.type}
-                    </div>
-                    <div className="bg-gray-100  capitalize rounded-full w-full  h-full flex items-center justify-center  px-5 py-2 text-xs ">
-                      {val.car_structure}
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="text-primarycolor"> Rs. <span className="text-xl font-semibold">3000</span> </div>
-                    <div className="text-primarycolor border border-primarycolor group-hover:bg-primarycolor group-hover:text-white text-sm px-4 py-2 rounded-md">Book Now</div>
-                  </div>
-                </div>
-              </div>
+                title={val.title}
+                image={val.image}
+                seats={val.seats}
+                car_structure={val.car_structure}
+                type={val.type}
+                alldata={val}
+              />
             );
           })}
         </div>

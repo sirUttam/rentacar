@@ -1,7 +1,5 @@
 import React from 'react'
-import Location from '../../../assets/Location.png'
-import Calendar from '../../../assets/Calendar.png'
-import CarLogo from '../../../assets/CarLogo.png'
+
 import TitleSection from '../../UI/TitleSection'
 import ReactStarsRating from 'react-awesome-stars-rating';
 function Testimonials() {

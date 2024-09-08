@@ -9,8 +9,11 @@ import Cars from './components/page/Cars'
 import Services from './components/page/Services'
 import Contact from './components/page/Contact'
 import Layout from './HOC/Layout'
+import SingleCar from './components/page/SingleCar'
+import { useEffect } from 'react'
 
 function App() {
+
 
   return (
     <>
@@ -21,9 +24,14 @@ function App() {
     <Route path='/' element={<Home/>}/>
     <Route path='/about' element={<About/>}/>
     <Route path='/brands' element={<Brands/>}/>
-    <Route path='/cars' element={<Cars/>}/>
+    <Route path='/cars' >
+    <Route index element={<Cars/>} />
+    <Route path='single_car/:id' element={<SingleCar/>} />
+
+    </Route>
     <Route path='/services' element={<Services/>}/>
     <Route path='/contact' element={<Contact/>}/>
+    
     </Route>
 
 
