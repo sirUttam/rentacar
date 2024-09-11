@@ -8,7 +8,7 @@ import ToyotaHiace from "../../assets/Toyota_Hiace 1.png";
 import SuzukiSwift from "../../assets/Suzuki_Swift 1.png";
 import Ford from "../../assets/Ford 1.png";
 import KiaSportage from "../../assets/Kia_Sportage 1.png";
-import carbanner from'../../assets/bannercar.jpg'
+import carbanner from'../../assets/bannerCar.jpg'
 
 import { IoIosSearch } from "react-icons/io";
 

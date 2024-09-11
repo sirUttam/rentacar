@@ -33,7 +33,7 @@ function Toolbar() {
           <Link to='/'>Home</Link>
           <Link to="/about">About</Link>
           <Link to="/cars">Cars</Link>
-          <Link to="/services">Services</Link>
+          <Link to="/blog">Blog</Link>
           <Link to="/contact">Contact</Link>
           
           <Link to="/become_a_lender">Become a Lender</Link>

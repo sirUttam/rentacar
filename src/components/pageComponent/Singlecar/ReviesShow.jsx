@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactStarsRating from "react-awesome-stars-rating";
 import { useLocation } from 'react-router-dom';
+import man from '../../../assets/man.jpg'
+import womman from '../../../assets/woman.jpg'
 
 function ReviesShow() {
   const location = useLocation();
@@ -15,18 +17,13 @@ function ReviesShow() {
       <div className="grid grid-cols-8">
         <div className="h-20 w-20 bg-red-500 overflow-clip rounded-full">
           <img
-            src={
-              location &&
-              location.state &&
-              location.state.data &&
-              location.state.data.image
-            }
+            src={man}
             className="h-full w-full object-cover"
           />
         </div>
         <div className="col-span-7 flex flex-col gap-3 w-full">
           <div className="flex items-center pr-6 justify-between">
-            <div className="text-lg font-semibold">Uttam Aryal</div>
+            <div className="text-lg font-semibold">Tommy Shelby</div>
             <div>
               <ReactStarsRating
                 value={3.5}
@@ -49,18 +46,13 @@ function ReviesShow() {
       <div className="grid grid-cols-8">
         <div className="h-20 w-20 bg-red-500 overflow-clip rounded-full">
           <img
-            src={
-              location &&
-              location.state &&
-              location.state.data &&
-              location.state.data.image
-            }
+            src={womman}
             className="h-full w-full object-cover"
           />
         </div>
         <div className="col-span-7 flex flex-col gap-3 w-full">
           <div className="flex items-center pr-6 justify-between">
-            <div className="text-lg font-semibold">Uttam Aryal</div>
+            <div className="text-lg font-semibold">Nami San</div>
             <div>
               <ReactStarsRating
                 value={4.5}

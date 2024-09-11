@@ -27,9 +27,8 @@ function Footer() {
           <div className="flex flex-wrap gap-3 md:flex-col lg:flex-row text-whitecolor">
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
-            <Link to="/brands">Brands</Link>
             <Link to="/cars">Cars</Link>
-            <Link to="/services">Services</Link>
+            <Link to="/blog">Blog</Link>
             <Link to="/contact">Contact</Link>
 
           </div>

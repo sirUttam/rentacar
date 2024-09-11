@@ -8,40 +8,40 @@ function BookingForm() {
     </div>
     <div className="grid grid-cols-2 gap-10 gap-y-4">
       <div className="flex flex-col gap-3">
-        <div className="font-medium text-md">Pickup location</div>
+        <div className="font-medium text-md">Pickup Location</div>
         <select className="border border-gray-400 capitalize rounded-md p-2 w-full">
-          <option>select a pickup location</option>
+          <option>Select a pickup location</option>
         </select>
       </div>
       <div className="flex flex-col gap-3">
-        <div className="font-medium text-md">Pickup location</div>
+        <div className="font-medium text-md">Dropoff Location</div>
         <select className="border border-gray-400 capitalize rounded-md p-2 w-full">
-          <option>select a pickup location</option>
+          <option>Select a dropoff location</option>
         </select>
       </div>
       <div className="flex flex-col gap-3">
-        <div className="font-medium text-md">Pickup location</div>
+        <div className="font-medium text-md">Pickup Date</div>
         <input
           className="border border-gray-400  rounded-md p-2 w-full"
           type="date"
         />
       </div>
       <div className="flex flex-col gap-3">
-        <div className="font-medium text-md">Pickup location</div>
+        <div className="font-medium text-md">Pickup Time</div>
         <input
           className="border border-gray-400 capitalize rounded-md p-2 w-full"
           type="time"
         />
       </div>
       <div className="flex flex-col gap-3">
-        <div className="font-medium text-md">Pickup location</div>
+        <div className="font-medium text-md">Dropoff Date</div>
         <input
           className="border border-gray-400  rounded-md p-2 w-full"
           type="date"
         />
       </div>
       <div className="flex flex-col gap-3">
-        <div className="font-medium text-md">Pickup location</div>
+        <div className="font-medium text-md">Dropoff Time</div>
         <input
           className="border border-gray-400 capitalize rounded-md p-2 w-full"
           type="time"

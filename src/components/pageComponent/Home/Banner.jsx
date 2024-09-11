@@ -2,15 +2,15 @@ import React from "react";
 
 function Banner({ image, titleHead, titleBody, buttons, subtitle, video }) {
   return (
-    <div className="relative overflow-x-hidden">
+    <div className="relative overflow-hidden">
       {video && (
         <video
           autoPlay
           muted
           loop
-          className="md:h-[640px] h-[500px] lg:h-screen object-cover w-full   "
+          className="md:h-[640px] h-[500px]    lg:h-screen object-cover w-screen  "
         >
-          <source src={image} type="video/mp4" />
+          <source src={image} type="video/mp4"  />
         </video>
       )}
       {!video && (
